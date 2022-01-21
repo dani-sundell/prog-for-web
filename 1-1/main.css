@@ -1,0 +1,12 @@
+p {
+   margin: auto;
+   text-align: center;
+}
+
+.name {
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #d17e1f;
+    font-weight: bold;
+}
