@@ -4,4 +4,5 @@ const yourFavMovies = prompt("What is your favorite movie?");
 
 myFavMovies.push(yourFavMovies);
 
-console.log(myFavMovies);
+window.alert(myFavMovies.toString());
+
