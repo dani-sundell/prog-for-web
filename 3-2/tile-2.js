@@ -1,6 +1,7 @@
 function setup() {
     createCanvas(600,600);
     angleMode(DEGREES);
+    noLoop();
 }
 
 function createTile(originX, originY, bgColor, secondaryColor, centerStarColor, topStarColor, bottomStarColor, accentCirclesColor) {
@@ -57,7 +58,7 @@ function createTile(originX, originY, bgColor, secondaryColor, centerStarColor, 
 }
 
 function draw() {
-    createTile(0, 0, 'SaddleBrown', 'Bisque', 'BurlyWood', 'sienna', 'peru', 'orange');
+   /* createTile(0, 0, 'SaddleBrown', 'Bisque', 'BurlyWood', 'sienna', 'peru', 'orange');
     createTile(0, 200, 'LightSteelBlue', 'WhiteSmoke', 'CornflowerBlue', 'LightBlue', 'RoyalBlue', 'DarkSlateBlue');
     createTile(0, 200, 'Olive', 'HoneyDew', 'DarkSlateGrey', 'DarkOliveGreen', 'DarkKhaki', 'DarkSeaGreen');
     createTile(200, -400, 'LightSteelBlue', 'WhiteSmoke', 'CornflowerBlue', 'LightBlue', 'RoyalBlue', 'DarkSlateBlue');
@@ -65,5 +66,28 @@ function draw() {
     createTile(0, 200, 'LightSteelBlue', 'WhiteSmoke', 'CornflowerBlue', 'LightBlue', 'RoyalBlue', 'DarkSlateBlue');
     createTile(200, -400, 'Olive', 'HoneyDew', 'DarkSlateGrey', 'DarkOliveGreen', 'DarkKhaki', 'DarkSeaGreen');
     createTile(0, 200, 'LightSteelBlue', 'WhiteSmoke', 'CornflowerBlue', 'LightBlue', 'RoyalBlue', 'DarkSlateBlue');
-    createTile(0, 200, 'SaddleBrown', 'Bisque', 'BurlyWood', 'sienna', 'peru', 'orange');
+    createTile(0, 200, 'SaddleBrown', 'Bisque', 'BurlyWood', 'sienna', 'peru', 'orange');*/
+
+    for(let i = 0; i < coordinatesBrown.length; i++) {
+        createTile(coordinatesBrown[i].originX, coordinatesBrown[i].originY, 'SaddleBrown', 'Bisque', 'BurlyWood', 'sienna', 'peru', 'orange');
+        } 
+
+    for(let i = 0; i < coordinatesBlue.length; i++) {
+        createTile(coordinatesBlue[i].originX, coordinatesBlue[i].originY, 'LightSteelBlue', 'WhiteSmoke', 'CornflowerBlue', 'LightBlue', 'RoyalBlue', 'DarkSlateBlue');
+        } 
 }
+
+let coordinatesBlue = [
+    {originX:-400, originY:-200}, //2
+    {originX:200, originY:0}, //5
+    {originX:200, originY:0}, //8
+];
+
+let coordinatesBrown = [
+    {originX:0, originY:0}, // 1 
+    {originX:0, originY:400}, //3
+    {originX:200, originY:-400}, //4
+    {originX:0, originY:400}, //6
+    {originX:200, originY:-400}, //7
+    {originX:0, originY:400}, //9
+];

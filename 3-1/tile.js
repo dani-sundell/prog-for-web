@@ -1,6 +1,7 @@
 function setup() {
     createCanvas(200, 200);
     angleMode(DEGREES);
+    noLoop();
 }
 
 function createTile() {
