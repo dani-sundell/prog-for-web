@@ -17,19 +17,19 @@ let cardBack;
 let cardFaceArray = [];
 
 function preload() {
-    yeehawSound = loadSound('../4-a/sounds/yeehaw.mp3');
-    shootSound = loadSound('../4-a/sounds/shootin.mp3');
-    fontCottonwood = loadFont('../4-a/fonts/cottonwood.otf');
-    cardBack = loadImage('../4-a/images/game-card-front.png');
+    yeehawSound = loadSound('sounds/yeehaw.mp3');
+    shootSound = loadSound('sounds/shootin.mp3');
+    fontCottonwood = loadFont('fonts/cottonwood.otf');
+    cardBack = loadImage('images/game-card-front.png');
     cardFaceArray = [ 
-        loadImage('../4-a/images/game-card-archery.png'),
-        loadImage('../4-a/images/game-card-banjo.png'),
-        loadImage('../4-a/images/game-card-cactus.png'),
-        loadImage('../4-a/images/game-card-cowboy.png'),
-        loadImage('../4-a/images/game-card-horse.png'),
-        loadImage('../4-a/images/game-card-moon.png'),
-        loadImage('../4-a/images/game-card-railroad.png'),
-        loadImage('../4-a/images/game-card-snake.png')
+        loadImage('images/game-card-archery.png'),
+        loadImage('images/game-card-banjo.png'),
+        loadImage('images/game-card-cactus.png'),
+        loadImage('images/game-card-cowboy.png'),
+        loadImage('images/game-card-horse.png'),
+        loadImage('images/game-card-moon.png'),
+        loadImage('images/game-card-railroad.png'),
+        loadImage('images/game-card-snake.png')
     ];
 }
 
@@ -61,7 +61,7 @@ function setup() {
 
 function draw() {
     background('PapayaWhip');
-    cursor('../4-a/images/cursor-01.png');
+    cursor('images/cursor-01.png');
     if (gameState.numMatched === gameState.totalPairs) {
         yeehawSound.play();
         yeehawSound.setVolume(.2);
@@ -197,48 +197,3 @@ function canvasPressed() {
     shootSound.play();
     shootSound.setVolume(.2);
   }
-
-
-/*
-    let fontCottonwood;
-    let scoreTally = 0;
-    let firstX = 75;
-    let firstY = 75;
-    let myCards = [];
-    let startingId = 0;
-    let shootSound;
-    
-    function preload() {
-        fontCottonwood = loadFont('../4-a/fonts/cottonwood.otf');
-        shootSound = loadSound('../4-a/sounds/shootin.mp3');
-    }
-    
-    function setup() {
-        let cnv = createCanvas(850, 850);
-        cnv.mousePressed(canvasPressed);
-        background('Peru');
-        for(let k = 0; k < 4; k++){
-            for(let i = 0; i < 4; i++) {
-                rect(firstX, firstY, 150, 150);
-                myCards.push({ x: firstX, y: firstY, id: startingId});
-                firstX += 182.5;
-                startingId++;
-            }
-            firstX = 75;
-            firstY += 175;
-        }
-    }
-    
-    
-    
-    function draw() {
-        cursor('../4-a/images/cursor-01.png');
-        title();
-        score();
-    }
-    
-    function canvasPressed() {
-        shootSound.play();
-        shootSound.setVolume(.2);
-      }
-*/
