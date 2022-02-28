@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vue.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rbg2qzw.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rbg2qzw.css">
+    <title>Vue Llama Facts - 6-a</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Llama Facts</h1>
+        <img src="llama.png">
+        <div id="myLlamas">
+            <ul>
+                <li>{{llamaFact1}}</li>
+                <li>{{llamaFact2}}</li>
+                <li>{{llamaFact3}}</li>
+                <li>{{llamaFact4}}</li>
+                <li>{{llamaFact5}}</li>
+                <li>{{llamaFact6}}</li>
+                <li>{{llamaFact7}}</li>
+                <li>{{llamaFact8}}</li>
+                <li>{{llamaFact9}}</li>
+                <li v-if="llamaBabies===true">{{llamaFact10}}</li><li v-else>{{llamaFact11}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
