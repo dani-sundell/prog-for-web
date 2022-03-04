@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:10px;
+    text-transform: capitalize;
+}
+
+a {
+    color: black;
+}
+
+.same {
+    background-color: rgb(194, 157, 127);
+}
+
+.llamas {
+    background-color: #f3e5bf;
+}
+
+.alpacas {
+    background-color: #d1c1af;
+}

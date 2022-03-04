@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamas vs. Alpacas - 7-1</title>
+    <link rel="stylesheet" href="llamas-alpacas.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <table>
+            <tr>
+                <td></td>
+                <th scope="col" v-bind:style="{background: '#ccbe98'}"><a :href="llamaLink" :title="llamaLinkName">Llamas</a></th>
+                <th scope="col" v-bind:style="{background: '#b6a796'}"><a :href="alpacaLink" :title="alpacaLinkName">Alpacas</a></th>
+            </tr>
+            <tr>
+                <th scope="row">Weight</th>
+                <td v-bind:class = "'llamas',{'same': llamas.weight === alpacas.weight}">{{llamas.weight}}</td>
+                <td v-bind:class="'alpacas',{'same': llamas.weight === alpacas.weight}">{{alpacas.weight}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Region</th>
+                <td v-bind:class="{'same': llamas.region === alpacas.region}">{{llamas.region}}</td>
+                <td v-bind:class="{'same': llamas.region === alpacas.region}">{{alpacas.region}}</td>
+            </tr>
+           <tr>
+                <th scope="row">Color</th>
+                <td v-bind:class="'llamas',{'same': llamas.color === alpacas.color}">{{llamas.color}}</td>
+                <td v-bind:class="'alpacas',{'same': llamas.color === alpacas.color}">{{llamas.color}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Diet</th>
+                <td v-bind:class="'llamas',{'same': llamas.diet === alpacas.diet}">{{llamas.diet}}</td>
+                <td v-bind:class="'alpacas',{'same': llamas.diet === alpacas.diet}">{{llamas.diet}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="llamas-alpacas.js"></script>
+</body>
+</html>
