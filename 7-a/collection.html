@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - 7-a</title>
+    <link rel="stylesheet" href="collection.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/lqq7koo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lqq7koo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Playing Card Collection</h1>
+        <div class="legend">
+            <div class="legend-item">Gift = <div class="box gift"></div></div>
+            <div class="legend-item">Purchased = <div class="box purchased"></div></div>
+        </div>
+       
+        <div id="app">
+            <table>
+                <tr>
+                    <th>Deck Name</th>
+                    <th>Card Box</th>
+                    <th>Card Back</th>
+                    <th>Card Front</th>
+                    <th>Location of Origin</th>
+                    <th>Acquisition Method</th>
+                </tr>
+                <tr v-for="(cards, index) in cards" v-bind:class="{gift: cards.methodOfAcquisition.includes('Gift') === true, purchased: cards.methodOfAcquisition.includes('Purchased') === true}">
+                    <td colspan="1">{{cards.deckName}}</td>
+                    <td><img :src="cards.deckBox"></td>
+                    <td><img :src="cards.cardBack"></td>
+                    <td><img :src="cards.cardFace"></td>
+                    <td>{{cards.originLocation}}</td>
+                    <td>{{cards.methodOfAcquisition}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  
+    <script src="collection.js"></script>
+</body>
+</html>
