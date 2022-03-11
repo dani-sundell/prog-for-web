@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - 8-1</title>
+    <link rel="stylesheet" href="forms.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+        <div id="myForm">
+            <form>
+                <fieldset>
+                    <legend>Fan Club Registration</legend>
+                    <div class="fields">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" v-model="firstName">
+                    </div>
+                    <div class="fields">
+                        <label for="lastName">Last Name</label><input id="lastName" v-model="lastName">
+                    </div>
+                    <div class="fields">
+                        <label for="street">Street Address</label><input id="street" v-model="street">
+                    </div>
+                    <div class="fields">
+                        <label>State</label>
+                        <select name="" id="" v-model="state">
+                            <option v-for="state in availableStates" v-bind:value="state.value">{{state.name}}</option>
+                        </select>
+                    </div>
+                    <div class="fields alpaca-color">
+                        <p>Favorite Alpaca Colors</p>
+                        <div>
+                            <ul>
+                              <li v-for="color in colors">
+                                <label v-bind:for="color.value">
+                                  <input type="checkbox" v-model="selectedColors" name="" v-bind:id="color.value" v-bind:value="color.value">
+                                  {{color.name}}
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="fields alpaca-status">
+                        <label>Alpaca Status</label>
+                        <textarea cols="30" rows="10" v-model="status"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="output">
+                <h3>Output</h3>
+                First Name: {{firstName}}<br>
+                Last Name: {{lastName}}<br>
+                Street: {{street}}<br>
+                State: {{state}}<br>
+                Color: {{selectedColors}}<br>
+                Status: {{status}}
+            </div>
+        </div>
+    <script src="forms.js"></script>
+</body>
+</html>

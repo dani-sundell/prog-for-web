@@ -1,0 +1,40 @@
+form {
+    width: 300px;
+    margin: 2% auto;
+}
+
+div {
+    display: flex;
+}
+
+#myForm {
+    flex-direction: column;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.fields {
+    margin-top: 10px;
+}
+
+.alpaca-status, .alpaca-color, .output{
+    flex-direction: column;
+}
+
+div input, div select {
+    flex-grow: 1;
+}
+
+.output {
+    flex-grow: 1;
+    width: 300px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
