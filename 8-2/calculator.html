@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - 8-1</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="myCalc">
+        <h1>Quick Calculate</h1>
+        <form>
+            <div class="operation">
+                <input v-model="firstNum" type="number" placeholder="first number">
+                <select v-model="operation">
+                    <option value="add">&#x002B;</option>
+                    <option value="subtract">&#x2212;</option>
+                    <option value="multiply">&#x00D7;</option>
+                    <option value="divide">&#x00F7;</option>
+                </select>
+                <input v-model="secondNum" type="number" placeholder="second number">
+            </div>
+            <div class="button-wrap">
+                <button @click="calculate(firstNum, secondNum)" type="button">Calculate</button>
+            </div>
+        </form>
+        <div class="output">
+            <!-- operation: {{operation}}<br> -->
+            total: <strong>{{total}}</strong>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
