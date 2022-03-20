@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="header">My Playing Card Collection</h1>
+        <h1>My Playing Card Collection</h1>
         <div class="legend">
             <div class="legend-item">Gift = <div class="box gift"></div></div>
             <div class="legend-item">Purchased = <div class="box purchased"></div></div>
@@ -27,7 +27,6 @@
                     <th>Card Front</th>
                     <th>Location of Origin</th>
                     <th>Acquisition Method</th>
-                    <th>Actions</th>
                 </tr>
                 <tr v-for="(cards, index) in cards" v-bind:class="{gift: cards.methodOfAcquisition.includes('Gift') === true, purchased: cards.methodOfAcquisition.includes('Purchased') === true}">
                     <td colspan="1">{{cards.deckName}}</td>
@@ -36,68 +35,8 @@
                     <td><img :src="cards.cardFace"></td>
                     <td>{{cards.originLocation}}</td>
                     <td>{{cards.methodOfAcquisition}}</td>
-                    <td><button type="button" v-on:click="deleteItem(cards)">Delete</button></td>
                 </tr>
             </table>
-            <form v-on:submit.prevent="submitHandler" class="collection-form">
-                <fieldset>
-                    <legend class="header">Add a card deck to the collection</legend>
-                    <div class="form-field">
-                        <label class="form-padding form-label" for="deckName">Deck Name</label>
-                        <input class="input-field" type="text" name="" id="deckName" v-model="newDeckObj.deckName" placeholder="Bicycle Red">
-                    </div>
-                    <div class="form-field">
-                        <div><label class="form-padding form-label" for="deckBox">Deck Box</label>
-                        <div class="label-desc">Please provide the url of a square image</div>
-                        </div>
-                        <input class="input-field" type="text" name="" id="deckBox" v-model="newDeckObj.deckBox" placeholder="https:/example.com/deck-box.jpg">
-                    </div>
-                    <div class="form-field">
-                        <div>
-                            <label class="form-padding form-label" for="cardBack">Card Back</label>
-                            <div class="label-desc">Please provide the url of a square image</div>
-                        </div>
-                        <input class="input-field" type="text" name="" id="cardBack" v-model="newDeckObj.cardBack" placeholder="https:/example.com/deck-back.jpg">
-                    </div>
-                    <div class="form-field">
-                        <div>
-                            <label class="form-padding form-label" for="cardFace">Card Face</label>
-                            <div class="label-desc">Please provide the url of a square image</div>
-                        </div>
-                        <input class="input-field" type="text" name="" id="cardFace" v-model="newDeckObj.cardFace" placeholder="https:/example.com/deck-face.jpg">
-                    </div>
-                    <div class="form-field">
-                        <label class="form-padding form-label" for="originLocation">Location of Origin</label>
-                        <input class="input-field" type="text" name="" id="originLocation" v-model="newDeckObj.originLocation" placeholder="Portland, ME">
-                    </div>
-                    <div class="form-field radio">
-                        <span class="form-label">Acquisition Method</span><br>
-                        <div class="input-field">
-                            <div class="radio-options">
-                                <input
-                                type="radio"
-                                id="acquisitionType.typeGift"
-                                value="Gift"
-                                v-model="newDeckObj.methodOfAcquisition"
-                                name="acquisition">
-                                <label class="form-padding" for="acquisitionType.typeGift">Gift</label>
-                            </div>
-
-                            <div class="radio-options">
-                                <input
-                                type="radio"
-                                id="acquisitionType.typePurchase"
-                                value="Purchased"
-                                v-model="newDeckObj.methodOfAcquisition"
-                                name="acquisition">
-                                <label class="form-padding" for="acquisitionType.typePurchase">Purchased</label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="button-wrap"><button type="submit">Submit</button></div>
-                </fieldset>
-            </form>
         </div>
     </div>
   
