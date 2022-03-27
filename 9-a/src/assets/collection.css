@@ -1,0 +1,165 @@
+/* Global */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: warnock-pro,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #252f46;
+}
+
+.button-wrap {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #fff;
+    color: #252f46;
+    text-align: center;
+    font-size: 18px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #252f46;
+    border: 1px solid #252f46;
+    color: #fff;
+}
+
+/* Type */
+
+.header {
+    text-align: center;
+    font-size: 44px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.legend {
+    padding: 0 20px 20px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.legend-item {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.box {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+/* Form */
+
+form {
+    color: #fff;
+}
+
+.collection-form {
+    background-color: #1a1c1f;
+    padding: 20px;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.form-field {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a37f6b;
+}
+
+.form-field:last-of-type {
+    border-bottom: none;
+}
+
+.form-padding {
+    padding: 0px 20px;
+}
+
+.form-label {
+    color: #fff;
+    font-size: 22px;
+}
+
+.label-desc {
+    font-size: 13px;
+    line-height: 1;
+    color: #cccccc;
+    padding-left: 20px;
+}
+
+.input-field {
+    width: 50%;
+}
+
+input {
+    height: 24px;
+}
+
+.radio {
+    padding-left: 40px;
+}
+
+.radio-options {
+    display: flex;
+    align-items: flex-start;
+}
+
+fieldset {
+    border: none;
+}
+
+
+/* Table */
+
+.gift {
+    background-color: #a37f6b;
+}
+
+.purchased {
+    background-color: #bb9c78;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+table, th, td {
+    border: 1px solid #252f46;
+    border-collapse: collapse;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+th {
+    background-color:#1a1c1f;
+    color: #fff;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
