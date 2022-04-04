@@ -1,0 +1,158 @@
+/* Global */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: warnock-pro,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #252f46;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav */
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #eee6e0;
+}
+
+.nav__container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav__header {
+    text-align: left;
+    font-size: 36px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #252f46;
+}
+
+.nav-links, .nav-links a {
+    font-size: 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    text-decoration: none;
+    color: #a58b61;
+}
+
+/* Home */
+
+.home__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.home__header {
+    color: #eee6e0;
+    font-size: 60px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Deck */
+
+.deck-name {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(37, 47, 70, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .8s ease;
+    font-size: 26px;
+    color: #fff;
+}
+
+.deck-name:hover {
+    opacity: 1;
+}
+
+.deck-row__container {
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.deck-row__grid {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0 20px;
+}
+
+.deck-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.deck-row img {
+    max-width: 350px;
+}
+
+
+/* Detail */
+
+.deck-detail__container {
+    width: 100%;
+    padding: 5% 0;
+}
+
+.deck-detail__img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5%;
+}
+
+.deck-detail__img img {
+    width: 100%;
+    height: auto;
+}
+
+.deck-detail__body {
+    color: #fff;
+}
+
+.deck-detail__body h1 {
+    color: #a58b61;
+    font-size: 40px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.deck-detail__body h2 {
+    color: #fff;
+    font-size: 24px;
+}
