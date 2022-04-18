@@ -93,7 +93,7 @@ class Note {
       this.s = s;
       this.width = 100;
       this.height = 100;
-      this.col = [0, 25, 6, 8, 3, 5, 255, 9];
+      this.col = [0, 25, 6, 8];
     }
     
     colorBlocks() {
@@ -114,7 +114,7 @@ class Note {
 
     stopNote(mouseX, mouseY) {
         if (mouseX >= this.x && mouseX <= this.x + this.width && mouseY >= this.y && mouseY <= this.y + this.height) {
-            this.col = [0, 25, 6, 8, 3, 5, 255, 9];
+            this.col = [0, 25, 6, 8];
         }
     }
 
