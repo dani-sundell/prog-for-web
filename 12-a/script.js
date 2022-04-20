@@ -14,7 +14,6 @@ function setup() {
         let blockColor = colorSet[i];
         let n = new Note(x, y, s, blockColor); //create note box
         notes.push(n);    
-        console.log(notes)
     }
     
     monoSynth = new p5.MonoSynth();
@@ -74,8 +73,6 @@ function playSynth() {
     if (mouseX >= 1000 && mouseX <= 1100) {
         note = 'C5';
     }
-
-    console.log(note);
 
     // note velocity (volume, from 0 to 1)
     let velocity = random(.5, 1);
