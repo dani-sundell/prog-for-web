@@ -1,5 +1,6 @@
 let monoSynth;
 let notes = [];
+let colorSet = ["#b8d4d4","#d1e4e4","#f9cdae","#f5b281","#e09b83","#d07569","#f66f65","#f88c84"];
 
 function setup() {
     let cnv = createCanvas(1400, 800);
@@ -10,7 +11,8 @@ function setup() {
         let x = i * 100 + 300;
         let y = 300;
         let s = 100;
-        let n = new Note(x, y, s); //create note box
+        let blockColor = colorSet[i];
+        let n = new Note(x, y, s, blockColor); //create note box
         notes.push(n);    
         console.log(notes)
     }
@@ -87,13 +89,14 @@ function playSynth() {
 
 
 class Note {
-    constructor(x, y, s) {
+    constructor(x, y, s, blockColor) {
       this.x = x;
       this.y = y;
       this.s = s;
       this.width = 100;
       this.height = 100;
-      this.col = [0, 25, 6, 8];
+      this.col = blockColor;
+      this.orginalCol = blockColor;
     }
     
     colorBlocks() {
@@ -114,7 +117,7 @@ class Note {
 
     stopNote(mouseX, mouseY) {
         if (mouseX >= this.x && mouseX <= this.x + this.width && mouseY >= this.y && mouseY <= this.y + this.height) {
-            this.col = [0, 25, 6, 8];
+            this.col = this.orginalCol;
         }
     }
 
