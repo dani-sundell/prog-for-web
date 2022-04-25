@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+main {
+  width: 100%;
+}
+
+canvas {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: ivypresto-display, serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h1.title__header {
+  font-size: 4em;
+  letter-spacing: .15em;
+  line-height: .5;
+}
+
+h2.title__subheader {
+  font-family: input-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: .9em;
+}
+
+h2.instructions__header {
+  font-family: input-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: .9em;
+}
+
+i {
+  font-family: ivypresto-display,serif;
+  font-weight: 100;
+  font-style: italic;
+}
