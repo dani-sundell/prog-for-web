@@ -1,0 +1,347 @@
+/* Global */
+
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
+:root {
+    /* main color pallette */
+    --primary-light: #eeebe6ff;
+    --primary-accent-light: #d1cbc3ff;
+    --primary-accent-mid: #b5a183ff;
+    --primary-accent-dark: #987743ff;
+    --primary-dark: #26272eff;
+  
+    /* extended color palette*/
+    --pill-location: #4A4C34;
+    --pill-gift: #616784;
+    --pill-inherited: #30444A;
+    --pill-nature: #987743;
+    --pill-novelty: #2B535F;
+    --pill-ornate: #4A2A2C;
+    --pill-pop: #24392F;
+    --pill-purchased: #645346;
+    --pill-tarot: #5F342B;
+    --pill-travel: #282B3D;
+}
+
+.container {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1, h2, h3, h4, p, nav, .tags {
+    color: var(--primary-dark);
+}
+  
+h1 {
+    font-family: 'Bookmania';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    letter-spacing: 0.02em;
+    margin: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'Bookmania';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    margin: 0;
+}
+
+p {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+}
+
+.tags {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.carousel__home {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Nav */
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-color: var(--primary-dark);
+}
+
+.nav__container {
+    width: 90%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav__container a {
+    text-decoration: none;
+}
+
+.nav__header {
+    text-align: left;
+    font-size: 36px;
+    font-family: 'Bookmania';
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin: 0;
+    line-height: 1;
+    transition: .8s ease; 
+}
+
+.nav__header:hover {
+    color: var(--primary-accent-dark);
+}
+
+.nav-links, .nav-links a {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 20px;
+    text-decoration: none;
+    color: var(--primary-accent-dark);
+}
+
+/* Home */
+
+.home__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.home__header {
+    color: #eee6e0;
+    font-size: 60px;
+    font-family: broadsheet, serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Deck */
+
+.deck-name, .carousel-name {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+}
+
+.deck-row__grid a, .deck-carousel__grid a {
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.deck-row__container, .deck-carousel__container {
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.deck-row__grid, .deck-carousel__grid {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px 20px;
+}
+
+.deck-row, .carousel-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: .8s ease;
+}
+
+.deck-row:hover, .carousel-row:hover {
+    opacity: .5;
+}
+
+.deck-row img, .carousel-row img {
+    max-height: 270px;
+}
+
+
+/* Detail */
+
+.deck-detail__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 0 50px;
+}
+
+.deck-detail__img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 320px;
+    gap: 20px;
+}
+
+.deck-detail__img img {
+    max-height: 320px;
+}
+
+.deck-detail__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px 0;
+    margin-top: 40px;
+    width: 50%;
+}
+
+/* ----- Type Pills ----- */
+
+.pill__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* base pill */
+
+.pill {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 14px 10px 20px;
+    border-radius: 35px;
+    color: var(--primary-light);
+}
+
+/* location pills */
+
+.location {
+    background-color: var(--pill-location);
+}
+
+
+/* theme pills */
+
+.nature {
+    background-color: var(--pill-nature);
+}
+
+.novelty {
+    background-color: var(--pill-novelty);
+}
+
+.ornate {
+    background-color: var(--pill-ornate);
+}
+
+.popCulture {
+    background-color: var(--pill-pop);
+}
+
+.travel {
+    background-color: var(--pill-travel);
+}
+
+.tarot {
+    background-color: var(--pill-tarot);
+}
+
+
+/* aquisition pills */
+
+.gift {
+    background-color: var(--pill-gift);
+}
+
+.purchased {
+    background-color: var(--pill-purchased);
+}
+
+.inherited {
+    background-color: var(--pill-inherited);
+}

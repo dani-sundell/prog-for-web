@@ -31,13 +31,20 @@ function starsMoon() { //create star cluster and moon
   randomSeed(300);
   translate(-width * 2, -height * 2);
   noStroke();
-  fill(255);
+  let colors = [
+      color(210, 180, 170), 
+      color(40, 100, 29), 
+      color(100, 100, 110), 
+      color(102, 210, 12)
+  ]
   for (let i = 0; i < 300; i++) { // stars
-      ellipse(random(0,width * 4) + i, random(0,height * 4) + i, 2, 2);
+      fill(colors[i % colors.length])  // loop through colors
+      ellipse(random(0,width * 4) + i, random(0,height * 4) + i, 4, 4);
   }
   fill(255);
   ellipse(width * 1.25, height * 2, 100, 100); // moon
 }
+
 
 function sky(){ //rotate sky
   rotate(angle);
