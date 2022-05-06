@@ -1,9 +1,7 @@
 <script setup>
 import DeckList from '../data/decks.json';
+import test from '../data/test.json';
 import { useRoute } from 'vue-router';
-
-// var newArray = JSON.parse(JSON.stringify(DeckList).replace(/lnbrk/g, '<p>'));
-// console.log(newArray);
 
 const route = useRoute();
 const paramId = route.params.id * 1;
@@ -35,7 +33,7 @@ const item = DeckList.find(item => {
         }">
         {{item.theme}}</div>
       </div>
-      <p>{{item.body}}</p>
+      <p v-html="item.body"></p>
     </div>
     <div class="deck-detail__img">
       <div><img :src="item.cardBack" :alt="item.deckName" /></div>
