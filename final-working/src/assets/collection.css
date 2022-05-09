@@ -658,3 +658,20 @@ footer {
     max-width: 100%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .deck-detail__img {
+    max-height: 190px;
+  }
+  
+  .deck-detail__img img {
+    max-height: 190px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+}
+
