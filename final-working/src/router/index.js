@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import About from '../views/About.vue';
 import CollectionList from '../views/CollectionList.vue';
 import CollectionDetail from '../views/CollectionDetail.vue';
 
@@ -17,9 +18,14 @@ const router = createRouter({
       component: CollectionList
     },
     {
-      path: '/collection/:id', // console detail
+      path: '/collection/:id', // collection detail
       name: 'collection-detail',
       component: CollectionDetail
+    },
+    {
+      path: '/about', // about page
+      name: 'about',
+      component: About
     }
   ]
 })

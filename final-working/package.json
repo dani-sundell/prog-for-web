@@ -7,8 +7,10 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
