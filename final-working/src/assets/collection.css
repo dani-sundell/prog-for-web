@@ -127,7 +127,7 @@ p {
 
 .carousel__home {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* nav */
@@ -282,7 +282,7 @@ nav {
 }
 
 .carousel-row img {
-  max-height: 370px;
+  max-height: 330px;
 }
 
 /* detail */
